@@ -1,0 +1,289 @@
+{
+	"info": {
+		"_postman_id": "cd4a4438-c4f7-41df-92af-43f6ff031eb0",
+		"name": "Examen",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Aplications",
+			"item": [
+				{
+					"name": "All",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBsaWNhdGlvbl9pZCI6IjY0MjljM2FhYTY4ZjMzYzg3OTJlOGFkMSIsImlhdCI6MTY4MDQ1ODY2NiwiZXhwIjoxNjgwNDYyMjY2fQ.klmFLnEmuwSS5bAFoDx05ncyG8ItFmQ4A-bJwE_qzPk",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/app",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"app"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"App 1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/app",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"app"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"App 1.1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/app/6429b67467fc67dbf9afdfe2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"app",
+								"6429b67467fc67dbf9afdfe2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/app/6429b67467fc67dbf9afdfe2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"app",
+								"6429b67467fc67dbf9afdfe2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/app/6429b5b099092c24f88d5779",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"app",
+								"6429b5b099092c24f88d5779"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Logs",
+			"item": [
+				{
+					"name": "All",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBsaWNhdGlvbl9pZCI6IjY0MmExNTMwMjhiNDNkZjE0YTJhYmU5OCIsImlhdCI6MTY4MDQ3OTUzOCwiZXhwIjoxNjgwNDgzMTM4fQ.s-3CkJ73Pwa88W1TpGrOAn-KjFfcNz6DlydW3_C3j-A",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/logs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"logs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBsaWNhdGlvbl9pZCI6IjY0MmExNTMwMjhiNDNkZjE0YTJhYmU5OCIsImlhdCI6MTY4MDQ3OTUzOCwiZXhwIjoxNjgwNDgzMTM4fQ.s-3CkJ73Pwa88W1TpGrOAn-KjFfcNz6DlydW3_C3j-A",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"application_id\": \"6429c3aaa68f33c8792e8ad1\",\r\n    \"type\": \"error\",\r\n    \"priority\": \"lowest\",\r\n    \"path\": \"path\",\r\n    \"message\": \"message\",\r\n    \"request\": {},\r\n    \"response\":  {}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/logs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"logs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update ID",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBsaWNhdGlvbl9pZCI6IjY0MmExNTMwMjhiNDNkZjE0YTJhYmU5OCIsImlhdCI6MTY4MDQ3OTUzOCwiZXhwIjoxNjgwNDgzMTM4fQ.s-3CkJ73Pwa88W1TpGrOAn-KjFfcNz6DlydW3_C3j-A",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"application_id\": \"642a153028b43df14a2abe98\",\r\n    \"type\": \"error\",\r\n    \"priority\": \"lowest\",\r\n    \"path\": \"path\",\r\n    \"message\": \"message\",\r\n    \"request\": {},\r\n    \"response\":  {}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/logs/6429b5b099092c24f88d5779",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"logs",
+								"6429b5b099092c24f88d5779"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/logs/6429b5b099092c24f88d5779",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"logs",
+								"6429b5b099092c24f88d5779"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/logs/6429b5b099092c24f88d5779",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"logs",
+								"6429b5b099092c24f88d5779"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
