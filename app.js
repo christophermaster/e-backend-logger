@@ -1,3 +1,4 @@
+const dotenv = require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
@@ -14,3 +15,5 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/api', require('./routes/main.routes'));
 
 module.exports = app;
+
+
